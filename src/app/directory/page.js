@@ -27,23 +27,20 @@ export default function Home() {
 
   return (
     <div className="w-full flex justify-center">
-      <main className="container flex flex-col items-center justify-center w-full px-4 gap-10">
-        <Link href="/">
-          <img src="https://nhs.edu.mn/favicon.ico"></img>
-        </Link>
+      <main className="container flex flex-col items-center justify-center w-full px-4 gap-10 mt-4">
         <div className="text-3xl font-bold">Classmate List</div>
         <div className="flex gap-4 items-center">
-          <input value={nameSearch} onChange={(e) => setNameSearch(e.target.value)} type="text" placeholder="Search..." className="w-full max-w-md px-4 py-2 border rounded-lg"/>
+          <input value={nameSearch} onChange={(e) => setNameSearch(e.target.value)} type="text" placeholder="Search..." className="w-full max-w-md px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400"/>
         </div>
-        <div className="w-full grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
+        <div className="w-full mb-4 grid 2xl:grid-cols-6 xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4">
           {jsonData.filter((item) => item.first_name.toLowerCase().includes(nameSearch.toLowerCase())).map((item) => (
-            <div className="p-4 border rounded-2xl flex flex-col justify-between gap-2" key={item.id}>
+            <div className="p-4 border border-gray-200 dark:border-gray-700 rounded-2xl bg-white dark:bg-gray-800 flex flex-col justify-between gap-2 shadow-sm dark:shadow-lg" key={item.id}>
               <div className="flex flex-col gap-2">
                 <div className="flex gap-2 items-center">
                   <img src={item.image} className="w-16"></img>
                   <div className="flex flex-col w-full">
                     <h2 className="font-bold text-lg">{item.first_name}</h2>
-                    {(item.type == "student") ? <div className="bg-blue-400 text-blue-600 px-2 py-1 rounded-full font-bold">{item.type}</div> : <div className="bg-green-400 text-green-800 px-2 py-1 rounded-full font-bold">{item.type}</div>}
+                    {(item.type == "student") ? <div className="bg-blue-400 text-blue-600 px-2 py-1 rounded-full font-bold text-center">{item.type}</div> : <div className="bg-green-400 text-green-800 px-2 py-1 rounded-full font-bold text-center">{item.type}</div>}
                   </div>
                 </div>
                 <p>Age: {item.age}</p>
@@ -57,37 +54,37 @@ export default function Home() {
                     <>
                       <div className="flex gap-2">
                         <button
-                          className="flex-1 bg-blue-500 hover:bg-blue-400 rounded-lg px-3 py-2"
+                          className="flex-1 bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white rounded-lg px-3 py-2 transition-colors font-medium"
                           onClick={() => handlePrevItem(item.id, item.item.length)}
                         >
                           Prev
                         </button>
                         <button
-                          className="flex-1 bg-blue-500 hover:bg-blue-400 rounded-lg px-3 py-2"
+                          className="flex-1 bg-blue-500 hover:bg-blue-600 dark:bg-blue-600 dark:hover:bg-blue-700 text-white rounded-lg px-3 py-2 transition-colors font-medium"
                           onClick={() => handleNextItem(item.id, item.item.length)}
                         >
                           Next
                         </button>
                       </div>
-                      <div className="border rounded-xl p-3 bg-slate-50">
+                      <div className="border border-gray-200 dark:border-gray-600 rounded-xl p-3 bg-gray-50 dark:bg-gray-700">
                         <div className="flex items-center gap-3">
                           {item.item[itemIndexById[item.id] ?? 0]?.image ? (
                             <img src={item.item[itemIndexById[item.id] ?? 0].image} alt={item.item[itemIndexById[item.id] ?? 0].name} className="w-20 h-20 object-cover rounded-lg" />
                           ) : null}
                           <div>
-                            <div className="font-bold text-base">{item.item[itemIndexById[item.id] ?? 0].name}</div>
-                            <p className="text-sm font-semibold">${item.item[itemIndexById[item.id] ?? 0].price}</p>
+                            <div className="font-bold text-base text-gray-900 dark:text-gray-100">{item.item[itemIndexById[item.id] ?? 0].name}</div>
+                            <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">${item.item[itemIndexById[item.id] ?? 0].price}</p>
                           </div>
                         </div>
-                        <p className="text-sm text-slate-600">{item.item[itemIndexById[item.id] ?? 0].description}</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">{item.item[itemIndexById[item.id] ?? 0].description}</p>
                       </div>
                     </>
                   ) : (
-                    <p className="text-sm text-slate-500">No items available.</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">No items available.</p>
                   )}
                 </div>
               </div>
-              <button className="bg-red-600 hover:bg-red-400 text-white rounded-lg px-4 py-2">Delete</button>
+              <button className="bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-800 text-white rounded-lg px-4 py-2 transition-colors font-medium">Delete</button>
             </div>
           ))}
         </div>
