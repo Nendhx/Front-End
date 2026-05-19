@@ -76,7 +76,7 @@ export default function AboutUs() {
 
         <div className="mt-20 text-center">
           <Link href="/contact-us">
-            <button className="inline-flex rounded-full bg-purple-600 px-8 py-3 text-base font-semibold text-white transition hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600">
+            <button className="cursor-pointer inline-flex rounded-full bg-purple-600 px-8 py-3 text-base font-semibold text-white transition hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600">
               Contact our team
             </button>
           </Link>

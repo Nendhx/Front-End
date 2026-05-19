@@ -38,7 +38,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Contact</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">Get in touch with our team and community members.</p>
               <Link href="/contact-us">
-                <button className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-lg px-4 py-2 transition-colors duration-200 font-medium">
+                <button className="cursor-pointer w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-lg px-4 py-2 transition-colors duration-200 font-medium">
                   Contact Us
                 </button>
               </Link>
@@ -56,7 +56,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Content</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">Explore our rich collection of educational materials.</p>
               <Link href="/about-us">
-                <button className="w-full bg-green-600 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 text-white rounded-lg px-4 py-2 transition-colors duration-200 font-medium">
+                <button className="cursor-pointer w-full bg-green-600 hover:bg-green-700 dark:bg-green-500 dark:hover:bg-green-600 text-white rounded-lg px-4 py-2 transition-colors duration-200 font-medium">
                   About Us
                 </button>
               </Link>
@@ -74,7 +74,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Weather</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">Check local weather conditions and forecasts.</p>
               <Link href="/weather">
-                <button className="w-full bg-yellow-600 hover:bg-yellow-700 dark:bg-yellow-500 dark:hover:bg-yellow-600 text-white rounded-lg px-4 py-2 transition-colors duration-200 font-medium">
+                <button className="cursor-pointer w-full bg-yellow-600 hover:bg-yellow-700 dark:bg-yellow-500 dark:hover:bg-yellow-600 text-white rounded-lg px-4 py-2 transition-colors duration-200 font-medium">
                   View Weather
                 </button>
               </Link>
@@ -92,7 +92,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Directory</h3>
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">Find teachers and students in our community.</p>
               <Link href="/directory">
-                <button className="w-full bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 text-white rounded-lg px-4 py-2 transition-colors duration-200 font-medium">
+                <button className="cursor-pointer w-full bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 text-white rounded-lg px-4 py-2 transition-colors duration-200 font-medium">
                   View Directory
                 </button>
               </Link>

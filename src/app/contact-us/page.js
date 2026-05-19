@@ -44,7 +44,7 @@ export default function ContactUs() {
                 <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Message</span>
                 <textarea rows="5" placeholder="Tell us how we can help" className="mt-2 w-full rounded-3xl border border-slate-300 bg-white px-4 py-3 text-slate-900 shadow-sm outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-200 dark:border-slate-700 dark:bg-slate-950 dark:text-slate-100 dark:focus:border-blue-400 dark:focus:ring-blue-900" />
               </label>
-              <button type="button" className="w-full rounded-3xl bg-blue-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600">
+              <button type="button" className="cursor-pointer w-full rounded-3xl bg-blue-600 px-6 py-3 text-base font-semibold text-white transition hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600">
                 Send Message
               </button>
             </form>
